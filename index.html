@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8A7766",
+                        secondary: "#566254",
+                        brown: "#eee8e1"
+                    },
+                    fontFamily: {
+                        'poppins': ["Poppins", "sans-serif"],
+                        'fraunces': ["Fraunces", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <title>The Listening Spa</title>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <!-- <section class="hero">
+        <div class="hero-imgs">
+            <img src="./assets/images/DSC08742.jpg" alt="" />
+            <img src="./assets/images/DSC08756.jpg" alt="" />
+            <img src="./assets/images/DSC08760.jpg" alt="" />
+            <img src="./assets/images/DSC08781.jpg" alt="" />
+            <img src="./assets/images/DSC08958.jpg" alt="" />
+            <img src="./assets/images/DSC08978.jpg" alt="" />
+            <img src="./assets/images/11.jpg" alt="" style="filter: blur(2px); -webkit-filter: blur(2px);" />
+        </div>
+    </section> -->
+
+
+
+    <!-- banner -->
+    <section class="banner relative">
+
+        <!-- header -->
+        <header
+            id="sidebar" class='z-50 hidden sm:flex max-w-7xl mx-auto items-center justify-center py-4 px-4 sm:px-10 z-50 min-h-[70px]'>
+            <div class='flex flex-wrap items-center gap-4 justify-center'>
+                <div id="collapseMenu" class='pt-0 mx-auto max-sm:fixed' style="z-index: 1000;">
+                    <ul
+                        class='relative sm:border-b border-white sm:pb-4 sm:flex gap-x-6 max-sm:space-y-3 max-sm:fixed max-sm:bg-white w-full max-sm:top-0 max-sm:left-0 max-sm:p-6 max-sm:h-screen max-sm:shadow-md max-sm:overflow-auto flex-wrap justify-center z-50'>
+                        <div class="flex items-end justify-center md:hidden">
+                            <img src="./assets/images/logo.jpeg" class="max-w-[100px] mx-auto" alt="logo" />
+                        </div>
+                        <button id="toggleClose"
+                            class='absolute sm:hidden top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black"
+                                viewBox="0 0 320.591 320.591">
+                                <path
+                                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                    data-original="#000000"></path>
+                                <path
+                                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                    data-original="#000000"></path>
+                            </svg>
+                        </button>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='javascript:void(0)'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Home
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>About
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Memberships
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Events
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Services
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Consulting
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Shop
+                            </a>
+                        </li>
+                        <li class='max-sm:border-b px-3 uppercase mt-4 text-white text-center'>
+                            <a href='/'
+                                class='hover:cursor-pointer block font-poppins tracking-wider text-black sm:text-white py-2 sm:py-0 transition-all text-sm'>Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- header ends -->
+
+        <div
+            class="max-w-4xl mx-auto relative z-50 mx-auto flex flex-col justify-center items-center text-center text-white p-6 pt-0 z-10" style="height: calc(100vh - 50px);">
+            <h2
+                class="lg:text-6xl sm:text-4xl text-3xl font-fraunces font-bold  wow animate__animated animate__flipInX">
+                Break free from Anxiety and Live Your
+                Best Life
+            </h2>
+
+            <button type="button"
+                class="animate__animated animate__fadeInUp mt-12 bg-white text-secondary text-sm md:text-base py-2 px-2 md:px-20 transition duration-300 font-semibold">
+                Schedule Your Free Consultation
+            </button>
+        </div>
+
+        <div class='sm:hidden flex py-3 bg-primary'>
+            <button id="toggleOpen" class='lg:hidden ml-auto mr-3'>
+                <svg class="w-7 h-7" fill="#ffffff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+
+    <section class="bg-brown pb-0 md:py-20">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-stretch justify-center">
+            <div class="w-full md:w-5/12">
+                <img class="wow animate__animated animate__fadeInLeft md:translate-y-[60px] w-full max-w-[400px] md:max-w-full mx-auto mt-10 md:mt-0"
+                    src="./assets/images/img_9107-edit.jpg" alt="image" />
+            </div>
+            <div class="w-full md:w-7/12 px-4 md:px-14 py-16 bg-white">
+                <div>
+                    <p class="text-sm mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Are You Tired
+                        of Feeling Overwhelmed by Anxiety?</p>
+                    <h2 class="wow animate__animated animate__fadeInUp text-3xl lg:text-5xl font-semibold text-primary font-fraunces text-black"
+                        data-wow-delay="0.6s">
+                        I’m Kimathi</h2>
+                    <p class="wow animate__animated animate__fadeInUp text-base md:text-2xl mt-5" data-wow-delay="0.9s">
+                        Welcome! I’m Kimathi, a certified anxiety coach dedicated to helping you conquer anxiety and
+                        reclaim your life. Through evidence-based skills and techniques, I guide my clients on a journey
+                        towards managing anxiety effectively and living well.
+                    </p>
+                    <a href="#"
+                        class="wow animate__animated animate__fadeInUp block max-w-[200px] bg-primary hover:bg-secondary text-white mt-8 text-center py-2 px-4 rounded font-semibold transition duration-300 ease-in-out"
+                        data-wow-delay="1.5s">Book
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- offers -->
+    <section class="bg-brown text-center pt-20 pb-4 md:pb-32 px-3">
+        <p class="uppercase text-xs sm:text-sm">LET'S TAP INTO YOUR SOFT GIRL LIFESTYLE</p>
+        <h2 class="text-xl sm:text-4xl uppercase mt-3 font-fraunces wow animate__animated animate__flipInX">What I Offer</h2>
+        <div class="max-w-6xl mx-auto flex flex-wrap mt-8 items-start justify-center">
+            <div class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/3 px-4 mt-6"
+                data-wow-delay="0.1s">
+                <div
+                    class="rounded-b-full overflow-hidden max-w-[330px] h-[380px] mx-auto hover:-translate-y-1 transition">
+                    <img src="./assets/images/cassiersg-146.jpg" class="object-cover w-full h-full" alt="image" />
+                </div>
+                <div class="h-[100px] w-[1px] bg-secondary mx-auto z-10"></div>
+                <h4 class="font-poppins text-xl my-3 font-semibold">Personalized Coaching Sessions</h4>
+                <p class="text-sm">I understand that everyone’s experience with anxiety is unique. That’s why I offer
+                    personalized
+                    coaching sessions tailored to your specific needs and goals. Together, we will create a customized
+                    plan to help you manage anxiety and improve your overall well-being.</p>
+            </div>
+            <div class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/3 px-4 mt-6"
+                data-wow-delay="0.4s">
+                <div
+                    class="rounded-b-full overflow-hidden max-w-[330px] h-[380px] mx-auto hover:-translate-y-4 transition">
+                    <img src="./assets/images/img_9238_1.jpg" class="object-cover w-full h-full" alt="image" />
+                </div>
+                <div class="h-[100px] w-[1px] bg-secondary mx-auto z-10"></div>
+                <h4 class="font-poppins text-xl my-3 font-semibold">Evidence-Based Techniques</h4>
+                <p class="text-sm">My coaching approach is grounded in proven, evidence-based techniques that have
+                    helped countless
+                    individuals break free from anxiety. You’ll learn practical strategies to manage stress, reduce
+                    anxiety symptoms, and build resilience.</p>
+            </div>
+            <div class="wow animate__animated animate__fadeInUp w-full md:w-1/2 lg:w-1/3 px-4 mt-6"
+                data-wow-delay="0.8s">
+                <div
+                    class="rounded-b-full overflow-hidden max-w-[330px] h-[380px] mx-auto hover:-translate-y-4 transition">
+                    <img src="./assets/images/pexels-charlotte-may-5825367.jpg" class="object-cover w-full h-full"
+                        alt="image" />
+                </div>
+                <div class="h-[100px] w-[1px] bg-secondary mx-auto z-10"></div>
+                <h4 class="font-poppins text-xl my-3 font-semibold">Supportive Environment</h4>
+                <p class="text-sm">I provide a safe, non-judgmental space where you can openly discuss your challenges
+                    and progress. My
+                    goal is to empower you with the tools and confidence you need to take control of your anxiety and
+                    thrive.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- how it works -->
+    <section class="bg-secondary text-center py-20 ">
+        <h2 class="text-4xl text-white uppercase mt-3 font-fraunces wow animate__animated animate__flipInX">How It Works
+        </h2>
+        <div class="max-w-6xl mx-auto flex flex-wrap mt-8 items-start justify-center">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mt-6 wow animate__animated animate__fadeInUp"
+                data-wow-delay="0.2s">
+                <div class="rounded-t-full overflow-hidden max-w-[330px] h-[380px] mx-auto">
+                    <img src="./assets/images/cassiersg-146.jpg"
+                        class="hover:-translate-y-1 transition object-cover w-full h-full" alt="image" />
+                </div>
+                <button type="button"
+                    class="mt-10 bg-white text-secondary text-base py-2 w-[200px] transition duration-300 font-semibold">
+                    Initial Consultation
+                </button>
+                <p class="text-center text-sm mx-auto text-white mt-8 w-[90%]">We’ll start with a free initial
+                    consultation to
+                    discuss your anxiety challenges and determine how I can best support you.</p>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mt-6 wow animate__animated animate__fadeInUp"
+                data-wow-delay="0.5s">
+                <div
+                    class="hover:-translate-y-1 transition rounded-t-full overflow-hidden max-w-[330px] h-[380px] mx-auto">
+                    <img src="./assets/images/img_9238_1.jpg" class="object-cover w-full h-full" alt="image" />
+                </div>
+                <button type="button"
+                    class="mt-12 bg-white text-secondary text-base py-2 w-[200px] transition duration-300 font-semibold">
+                    Personalized Plan
+                </button>
+                <p class="text-center text-sm mx-auto text-white mt-8 w-[90%]">Based on our discussion, a private
+                    consultation
+                    will follow where I’ll develop a personalized coaching plan that includes specific techniques and
+                    strategies to address your unique needs.</p>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mt-6 wow animate__animated animate__fadeInUp"
+                data-wow-delay="0.8s">
+                <div
+                    class="hover:-translate-y-1 transition rounded-t-full overflow-hidden max-w-[330px] h-[380px] mx-auto">
+                    <img src="./assets/images/pexels-charlotte-may-5825367.jpg" class="object-cover w-full h-full"
+                        alt="image" />
+                </div>
+                <button type="button"
+                    class="mt-12 bg-white text-secondary text-base py-2 w-[200px] transition duration-300 font-semibold">
+                    Initial Consultation
+                </button>
+                <p class="text-center text-sm mx-auto text-white mt-8 w-[90%]">Throughout our sessions, I’ll provide
+                    continuous
+                    support and guidance, helping you stay on track and achieve your goals.</p>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mt-6 wow animate__animated animate__fadeInUp"
+                data-wow-delay="1.1s">
+                <div
+                    class="hover:-translate-y-1 transition rounded-t-full overflow-hidden max-w-[330px] h-[380px] mx-auto">
+                    <img src="./assets/images/pexels-charlotte-may-5825367.jpg" class="object-cover w-full h-full"
+                        alt="image" />
+                </div>
+                <button type="button"
+                    class="mt-12 bg-white text-secondary text-base py-2 w-[200px] transition duration-300 font-semibold">
+                    Achieve Results
+                </button>
+                <p class="text-center text-sm mx-auto text-white mt-8 w-[90%]">As you implement the skills and
+                    techniques we
+                    discuss, you’ll start to see improvements in your ability to manage anxiety and enjoy a more
+                    balanced, fulfilling life.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="jumbotron">
+        <div class="relative h-screen px-5 z-50 max-w-6xl mx-auto max-w-5xl flex flex-col justify-center items-center
+        text-center text-white">
+            <h2 class="wow animate__animated animate__fadeInUp sm:text-4xl text-2xl font-bold font-fraunces mb-6"
+                data-wow-delay="0.2s">Ready to Take the First Step?</h2>
+            <p class="wow animate__animated animate__fadeInUp text-sm sm:text-lg text-center text-gray-200"
+                data-wow-delay="0.5s">If you’re ready to break free from anxiety and
+                live your best life, I’m here to help. Book your free initial consultation today and start your journey
+                towards a calmer, more balanced life.</p>
+
+
+            <a href="#"
+                class="max-w-[200px] wow animate__animated animate__fadeInUp mt-12 block w-full bg-primary hover:bg-secondary text-center py-2 px-4 rounded font-semibold transition duration-300 ease-in-out  bg-primary hover:bg-secondary text-white"
+                data-wow-delay="0.8s">
+                Book Now
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-8 flex flex-wrap items-stretch justify-center">
+            <div class="w-full md:w-1/2 flex flex-col space-y-6 md:space-y-8">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Contact Information:</h2>
+                    <ul class="list-none p-0 space-y-4">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 2a8 8 0 0 1 8 8c0 2.601-.645 5.045-1.771 7.154a1 1 0 0 1-1.667-1.108A6.002 6.002 0 0 0 10 4a6 6 0 0 0-5.562 7.986 1 1 0 0 1-1.108 1.667A9.97 9.97 0 0 1 2 10a10 10 0 0 1 10-10zm1 6a1 1 0 1 0-2 0v4a1 1 0 0 0 2 0V8z" />
+                            </svg>
+                            <span class="text-gray-700 font-poppins">268-123-456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 2a8 8 0 0 1 8 8c0 2.601-.645 5.045-1.771 7.154a1 1 0 0 1-1.667-1.108A6.002 6.002 0 0 0 10 4a6 6 0 0 0-5.562 7.986 1 1 0 0 1-1.108 1.667A9.97 9.97 0 0 1 2 10a10 10 0 0 1 10-10zm1 6a1 1 0 1 0-2 0v4a1 1 0 0 0 2 0V8z" />
+                            </svg>
+                            <span class="text-gray-700 font-poppins">email@example.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 2a8 8 0 0 1 8 8c0 2.601-.645 5.045-1.771 7.154a1 1 0 0 1-1.667-1.108A6.002 6.002 0 0 0 10 4a6 6 0 0 0-5.562 7.986 1 1 0 0 1-1.108 1.667A9.97 9.97 0 0 1 2 10a10 10 0 0 1 10-10zm1 6a1 1 0 1 0-2 0v4a1 1 0 0 0 2 0V8z" />
+                            </svg>
+                            <span class="text-gray-700 font-poppins">Bay Gardens, Antigua</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pl-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Schedule Your Free Consultation</h2>
+                <div class="text-gray-700 font-poppins mb-8">
+                    <p>Let's discuss how we can help you achieve your goals.</p>
+                </div>
+                <form id="appointmentForm">
+                    <div class="mb-6">
+                        <label for="summary" class="block text-sm font-medium text-gray-700">Summary</label>
+                        <input type="text" id="summary" name="summary" placeholder="Appointment Summary" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                    </div>
+                    <div class="mb-6">
+                        <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                        <textarea id="description" name="description" rows="3" placeholder="Appointment Description" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label for="startDateTime" class="block text-sm font-medium text-gray-700">Start Date & Time</label>
+                        <input type="datetime-local" id="startDateTime" name="startDateTime" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                    </div>
+                    <div class="mb-8">
+                        <label for="endDateTime" class="block text-sm font-medium text-gray-700">End Date & Time</label>
+                        <input type="datetime-local" id="endDateTime" name="endDateTime" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                    </div>
+                    <a href="#" class="block w-full py-3 px-6 bg-primary hover:bg-secondary text-white text-center rounded-md font-semibold transition duration-300 ease-in-out">Book Now</a>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- faqs -->
+    <section class="py-20 px-4 sm:px-10">
+        <div class="max-w-7xl mx-auto space-y-6">
+            <div class="mb-10 text-center">
+                <h2 class="md:text-4xl text-3xl font-semibold mb-6  wow animate__animated animate__flipInX">Frequently
+                    Asked Questions</h2>
+                <p>Explore common questions and find answers to help you make the most out of our services. If you
+                    don't
+                    see your question here, feel free to contact us for assistance.</p>
+            </div>
+            <div class="divide-y">
+                <div>
+                    <button type="button"
+                        class=" wow animate__animated animate__fadeInUp w-full text-base text-left font-semibold py-6 flex items-center"
+                        onclick="toggleAccordion(1)">
+                        <span class="mr-4">What can I expect during the initial consultation?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 fill-current ml-auto shrink-0"
+                            viewBox="0 0 42 42">
+                            <path
+                                d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z"
+                                data-original="#000000" />
+                        </svg>
+                    </button>
+                    <div id="accordion1" class="hidden py-6">
+                        <p>The initial consultation is a free meeting where we discuss your needs and objectives.
+                            We'll
+                            provide insights into our services and how they can benefit you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-primary text-gray-300 py-6 px-16 font-sans tracking-wide">
+        <div class="flex justify-between items-center max-lg:flex-col text-center flex-wrap gap-4">
+          <p class="text-[15px] leading-loose">© 2024 All Rights Reserved.</p>
+  
+          <ul class="flex sm:space-x-6 gap-y-2 max-lg:justify-center flex-col sm:flex-row">
+            <li><a href="/" class="text-[15px] hover:text-white">Terms of Service</a></li>
+            <li><a href="/" class="text-[15px] hover:text-white">Privacy Policy</a></li>
+            <li><a href="/" class="text-[15px] hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function toggleAccordion(index) {
+            var accordion = document.getElementById('accordion' + index);
+            accordion.classList.toggle('hidden');
+        }
+        new WOW().init();
+    </script>
+    <script src="./js/script.js"></script>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        const CLIENT_ID = 'YOUR_CLIENT_ID';
+        const API_KEY = 'YOUR_API_KEY';
+        const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+        const SCOPES = "https://www.googleapis.com/auth/calendar.events";
+
+        let authorizeButton = document.getElementById('authorizeButton');
+        let createEventButton = document.getElementById('createEventButton');
+        let summaryInput = document.getElementById('summary');
+        let descriptionInput = document.getElementById('description');
+        let startDateTimeInput = document.getElementById('startDateTime');
+        let endDateTimeInput = document.getElementById('endDateTime');
+        let statusMessage = document.getElementById('statusMessage');
+
+        function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+        }
+
+        function initClient() {
+            gapi.client.init({
+                apiKey: API_KEY,
+                clientId: CLIENT_ID,
+                discoveryDocs: DISCOVERY_DOCS,
+                scope: SCOPES
+            }).then(function () {
+                gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+                updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+                authorizeButton.onclick = handleAuthClick;
+                createEventButton.onclick = handleCreateEventClick;
+            }, function (error) {
+                console.error('Error initializing Google API client:', error);
+            });
+        }
+
+        function updateSigninStatus(isSignedIn) {
+            if (isSignedIn) {
+                authorizeButton.style.display = 'none';
+                createEventButton.style.display = 'block';
+            } else {
+                authorizeButton.style.display = 'block';
+                createEventButton.style.display = 'none';
+            }
+        }
+
+        function handleAuthClick(event) {
+            gapi.auth2.getAuthInstance().signIn();
+        }
+
+        function handleCreateEventClick(event) {
+            const summary = summaryInput.value;
+            const description = descriptionInput.value;
+            const startDateTime = new Date(startDateTimeInput.value).toISOString();
+            const endDateTime = new Date(endDateTimeInput.value).toISOString();
+
+            const event = {
+                'summary': summary,
+                'description': description,
+                'start': {
+                    'dateTime': startDateTime,
+                    'timeZone': 'UTC'
+                },
+                'end': {
+                    'dateTime': endDateTime,
+                    'timeZone': 'UTC'
+                }
+            };
+
+            gapi.client.calendar.events.insert({
+                'calendarId': 'primary',
+                'resource': event
+            }).then(function (response) {
+                console.log('Event created:', response);
+                statusMessage.textContent = 'Appointment booked successfully!';
+            }, function (error) {
+                console.error('Error creating event:', error);
+                statusMessage.textContent = 'Failed to book appointment. Please try again later.';
+            });
+        }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
+</body>
+
+</html>
