@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            z-index: 5000;
+        }
+
+        .hero-imgs {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-imgs>img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+        }
+
+        .white-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 9999;
+            opacity: 0;
+        }
+
+        .content-section {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .content-section.show {
+            opacity: 1;
+        }
+    </style>
+
+    <!-- GSAP and WOW.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!-- Preloader Section -->
+    <div class="preloader">
+        <div class="hero">
+            <div class="hero-imgs">
+                <img src="./assets/images/DSC08742.jpg" alt="">
+                <img src="./assets/images/DSC08756.jpg" alt="">
+                <img src="./assets/images/DSC08760.jpg" alt="">
+                <img src="./assets/images/DSC08781.jpg" alt="">
+                <img src="./assets/images/DSC08958.jpg" alt="">
+                <img src="./assets/images/DSC08978.jpg" alt="">
+                <img src="./assets/images/11.jpg" alt="">
+                <img src="./assets/images/12.jpg" alt="">
+            </div>
+            <div class="white-bg"></div>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <section class="banner relative content-section">
+        <!-- Header and Navigation -->
+        <header class="z-50 fixed top-0 left-0 right-0 bg-white shadow-md p-4">
+            <nav class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./assets/images/logo.jpeg" alt="Logo" class="h-12">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-gray-800 hover:text-primary">Home</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-primary">About</a></li>
+                        <li><a href="#" class="text-gray-800 hover:text-primary">Services</a></li>
+                        <!-- Add more menu items as needed -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="max-w-4xl mx-auto relative z-50 mx-auto flex flex-col justify-center items-center text-center text-white p-6 pt-0 z-10"
+            style="height: calc(100vh - 50px);">
+            <h2 class="lg:text-6xl sm:text-4xl text-3xl font-fraunces font-bold wow animate__animated animate__flipInX">
+                Break free from Anxiety and Live Your Best Life
+            </h2>
+            <button type="button"
+                class="animate__animated animate__fadeInUp mt-12 bg-white text-secondary text-sm md:text-base py-2 px-2 md:px-20 transition duration-300 font-semibold">
+                Schedule Your Free Consultation
+            </button>
+        </div>
+
+        <!-- Mobile Menu Button (if needed) -->
+        <div class="sm:hidden flex py-3 bg-primary">
+            <button id="toggleOpen" class="lg:hidden ml-auto mr-3">
+                <svg class="w-7 h-7" fill="#ffffff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Other Content Sections -->
+    <section class="bg-brown pb-0 md:py-20 content-section">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-stretch justify-center">
+            <div class="w-full md:w-5/12">
+                <img class="wow animate__animated animate__fadeInLeft md:translate-y-[60px] w-full max-w-[400px] md:max-w-full mx-auto mt-10 md:mt-0"
+                    src="./assets/images/img_9107-edit.jpg" alt="image" />
+            </div>
+            <div class="w-full md:w-7/12 px-4 md:px-14 py-16 bg-white">
+                <div>
+                    <p class="text-sm mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Are You
+                        Tired
+                        of Feeling Overwhelmed by Anxiety?</p>
+                    <h2 class="wow animate__animated animate__fadeInUp text-3xl lg:text-5xl font-semibold text-primary font-fraunces text-black"
+                        data-wow-delay="0.6s">
+                        I’m Kimathi</h2>
+                    <p class="wow animate__animated animate__fadeInUp text-base md:text-2xl mt-5" data-wow-delay="0.9s">
+                        Welcome! I’m Kimathi, a certified anxiety coach dedicated to helping you conquer anxiety and
+                        reclaim your life. Through evidence-based skills and techniques, I guide my clients on a
+                        journey
+                        towards managing anxiety effectively and living well.
+                    </p>
+                    <a href="#"
+                        class="wow animate__animated animate__fadeInUp block max-w-[200px] bg-primary hover:bg-secondary text-white mt-8 text-center py-2 px-4 rounded font-semibold transition duration-300 ease-in-out"
+                        data-wow-delay="1.5s">Book
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for GSAP and WOW.js -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tl = gsap.timeline({ defaults: { ease: "power4.inOut" } });
+
+            // Hide all images initially
+            gsap.set(".hero-imgs > img", { opacity: 0 });
+
+            // Animate each image
+            tl.staggerTo(".hero-imgs > img", 2, {
+                opacity: 1,
+                clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+                stagger: 0.25,
+            }, 0.25)
+                // Fade out the hero section and fade in the white background
+                .to(".hero", {
+                    opacity: 0,
+                    duration: 1,
+                    onComplete: function () {
+                        // Hide or remove the hero section after animation
+                        document.querySelector(".hero").style.display = "none";
+                    }
+                }, "-=1.5")
+                .to(".white-bg", {
+                    opacity: 1,
+                    duration: 1,
+                    onComplete: function () {
+                        // Remove the preloader section from the DOM
+                        document.querySelector(".preloader").style.display = "none";
+
+                        // Show content sections with fade-in effect
+                        const contentSections = document.querySelectorAll(".content-section");
+                        contentSections.forEach((section) => {
+                            section.classList.add("show");
+                        });
+                    }
+                }, "-=0.5"); // Delay white background animation slightly after hero section fades out
+        });
+
+    </script>
+</body>
+
+</html>
